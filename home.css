@@ -1,0 +1,202 @@
+.title{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.title img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+#sideBar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    background: rgb(36, 34, 43);
+    padding: 15px;
+    right: -300px;
+    transition: 0.4s;
+    z-index: 2;
+}
+#sideBar.active{
+    right: 0;
+}
+#sideBar h2 {
+    color: white;
+}
+#sideBar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#sideBar li {
+    margin-bottom: 10px;
+}
+#sideBar li a{
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+#sideBar li a:hover {
+    text-decoration: none;
+}
+#sideBar li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: rgb(236, 243, 243);
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }  
+#sideBar li a:hover::after {
+    opacity: 0.5;
+}
+#sideBar .toggleBtn{
+    position: absolute;
+    top: 38px;
+    right: 350px;
+}
+.toggleBtn span{
+    width: 45px;
+    height: 4px;
+    background: white;
+    display: block;
+    margin-top: 4px;
+}
+.socialList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: large;
+}
+.socialList li {
+    margin-bottom: 10px;
+}
+.socialList li a {
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+.socialList li a i {
+    margin-right: 5px;
+}
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://images.hdqwalls.com/wallpapers/little-nightmares-ii-mu.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    scroll-snap-align: start;
+    color: white;
+}
+#container .page1{
+    position: relative;
+}
+#container .page1 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#container .page2{
+    background-color:  rgba(211, 211, 211, 0.2);
+}
+#container .page3{
+    background-color:  rgba(211, 211, 211, 0.2);
+}
+.page2 {
+    background-color: rgba(211, 211, 211, 0.2);
+}
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gif-image {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+}
+.text-content {
+    margin-left: 50px;
+    margin-right: 200px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.imgSlider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+figure {
+    position: relative;
+    left: 50;
+    width: 400%;
+    animation: slide 10s infinite;
+}
+
+.slide {
+    position: relative;
+    width: 15%;
+    float: left;
+}
+
+@keyframes slide {
+    0%, 20%, 100%{
+        left: 0%;
+    }
+    21%, 40%{
+        left: -50%;
+    }
+    41%, 60% {
+        left: -100%;
+    }
+    61%, 80% {
+        left: -150%;
+    }
+    81%, 95% {
+        left: -200%;
+    }
+}
+
+
+
+
+
